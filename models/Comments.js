@@ -4,19 +4,24 @@ const sequelize = require('../config/connection');
 
 Comment.init(
 {
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     title: {
         type: DataTypes.STRING,
         allowNull: true,
     },
-
     content: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    user: {
+    user_id: {
         // HOW
     },
-    post: {
+    post_id: {
         // also HOW
     }
 }
